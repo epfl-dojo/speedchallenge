@@ -1,0 +1,14 @@
+{
+  "database": false,
+  "criteria": {
+    "Validation": {
+      "displayName": "Task 5 — Data Validation",
+      "pointOverrides": {
+        "testValidationMin": 0.5,
+        "testValidationMax": 0.5,
+        "testValidationUnique": 0.5,
+        "testValidationMultiple": 0.5
+      }
+    }
+  }
+}

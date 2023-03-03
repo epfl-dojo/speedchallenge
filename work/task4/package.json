@@ -1,0 +1,17 @@
+{
+    "name": "trade17-speed-challenge-task-4",
+    "version": "1.0.0",
+    "description": "ICTSkills 2020 — Trade 17 — Web Technologies",
+    "main": "src/checkerboard.js",
+    "scripts": {
+        "test": "mocha tests/**",
+        "test:json": "mocha --reporter tests/helper/reporter tests/**"
+    },
+    "author": "SwissSkills",
+    "private": true,
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "mocha": "^8.1.1",
+        "md5": "^2.3.0"
+    }
+}

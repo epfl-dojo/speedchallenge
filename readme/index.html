@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Speed Challenge - Swiss Competition 2020</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Swiss Competition 2020">
+    <meta name="author" content="Patrick Zahnd">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container-narrow tasks">
+
+    <div class="row masthead">
+        <div class="col-lg-2 pull-right">
+            <img class="pull-right" src="images/logo.png" width="140" alt="">
+        </div>
+        <div class="col-lg-10">
+            <h3 class="muted speed-challenge-title">Swiss Competition 2020 - Speed Challenge
+                <small>Trade 17 - Web Technologies</small>
+            </h3>
+        </div>
+    </div>
+    <div class="row">
+        <hr>
+
+        <div class="row sm-content">
+            <div class="col-lg-12">
+                <span class="label label-default pull-right"><big>Total points: 18</big></span>
+
+                <h1>Speed Challenge</h1>
+            </div>
+        </div>
+
+        <div class="row sm-content">
+            <div class="col-lg-12">
+                <h3 id="taskGeneralInformation">General information</h3>
+                <p>
+                    In the speed challenge you will prove various skills in a range of small independent tasks.
+                </p>
+                <p>
+                    You have exactly <strong>1 hour</strong> to complete as many tasks as possible.
+                    The points you score in the speed challenge will get added to your total points of the whole competition.
+                </p>
+                <p>
+                    Your solutions will be automatically marked on a central server in real-time.
+                    The first 3 competitors that complete all tasks get awarded some <b>extra points</b> (<b>3</b> points for the winner, <b>2</b> points for the second place and <b>1</b> point for the third place).
+                    If time runs out before someone was able complete all tasks, the competitors with the most points are awarded the extra points.
+                    You can also continue working on the speed challenge if other competitors are already finished as those points will still get added to your total competition points.
+                </p>
+
+                <div class="alert alert-success">
+                    All tasks can be tested by automated tests.
+                    To run them, change into their folder (e.g. <code>cd /home/student/ICTT17/speedchallenge/work/task1</code>)
+                    and execute the command stated in each task under <strong>expected result</strong>.
+                </div>
+
+                <div class="alert alert-danger">
+                    Before your start, please check that your name in <code>/home/student/ICTT17/speedchallenge/competitor.json</code> is correct.<br />
+                    If it is not, please call an expert.
+                </div>
+
+                <div class="alert alert-danger">
+                    You can only change existing files in the
+                    <code>speedchallenge/work/task<strong class="text-info">*</strong>/src/</code> folders
+                    (where <strong class="text-info">*</strong> is a number).
+                    All other files will be reverted for the review process.
+                </div>
+            </div>
+        </div>
+
+        <div class="row sm-content">
+            <div class="col-lg-12">
+                <h3 id="tasks">Tasks</h3>
+
+                The tasks do not have to be completed in the given order.
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Difficulty</th>
+                            <th>Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="#task1">Task 1 — Mirror letters in words (JavaScript)</a></td>
+                            <td><span class="label label-success">easy</span></td>
+                            <td><strong>1</strong></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#task2">Task 2 — Diagonal Sums (JavaScript)</a></td>
+                            <td><span class="label label-success">easy</span></td>
+                            <td><strong>1</strong></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#task3">Task 3 — String Info (PHP)</a></td>
+                            <td><span class="label label-success">easy</span></td>
+                            <td><strong>1</strong></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#task4">Task 4 — ASCII Art Checkerboard (JavaScript)</a></td>
+                            <td><span class="label label-warning">medium</span></td>
+                            <td><strong>2</strong></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#task5">Task 5 — Data Validation (PHP)</a></td>
+                            <td><span class="label label-warning">medium</span></td>
+                            <td><strong>2</strong></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#task6">Task 6 — Responsive Design (HTML/CSS)</a></td>
+                            <td><span class="label label-warning">medium</span></td>
+                            <td><strong>2</strong></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#task7">Task 7 — Newspaper Layout (HTML/CSS)</a></td>
+                            <td><span class="label label-danger">hard</span></td>
+                            <td><strong>3</strong></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#task8">Task 8 — Regex</a></td>
+                            <td><span class="label label-danger">hard</span></td>
+                            <td><strong>3</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Task 1 -->
+        <div class="row sm-content">
+            <div class="col-lg-8">
+                <h3 id="task1">
+                    Task 1 — Mirror letters in words (JavaScript)
+                    <span class="label label-success">easy</span>
+                </h3>
+                <p>
+                    Write a JavaScript function that given some sentence, reverts the order of the letters in each word.
+                    The order of the words should stay the same.
+                </p>
+                <p>
+                    For instance, <em>Hello World!</em> should become <em>olleH !dlroW</em>.
+                </p>
+
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <h4 class="list-group-item-heading">Working directory</h4>
+                        <p class="list-group-item-text">
+                            Implement the empty function in: <code>speedchallenge/work/task1/src/mirrorWords.js</code>
+                        </p>
+                        <p class="list-group-item-text">
+                            You are not allowed to change any other file.
+                        </p>
+                    </li>
+                    <li class="list-group-item">
+                        <h4 class="list-group-item-heading">Expected result</h4>
+                        <p class="list-group-item-text">
+                            <code>npm test</code> runs successfully in the <code>speedchallenge/work/task1</code> folder.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 marking">
+                <h3>Marking scheme</h3>
+
+                <h4>
+                    Objective
+                    <span class="badge">1</span>
+                </h4>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <span class="badge">1</span>
+                        The <code>mirrorWords</code> function works as specified, and the tests run successfully.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Task 2 -->
+        <div class="row sm-content">
+            <div class="col-lg-8">
+                <h3 id="task2">Task 2 — Diagonal Sums (JavaScript) <span class="label label-success">easy</span></h3>
+                <p>
+                    Write a JavaScript function that given a 2-dimensional (squared) array of numbers returns the sum of both diagonals. The number in the center is included in both diagonals.
+                </p>
+
+                <pre>
+[
+    [ 1, 2, 3 ],
+    [ 4, 5, 6 ],
+    [ 7, 8, 9 ]
+]
+
+// 1 + 5 + 9 + 3 + 5 + 7 = 30</pre>
+
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <h4 class="list-group-item-heading">Working directory</h4>
+                        <p class="list-group-item-text">
+                            Implement the empty function in: <code>speedchallenge/work/task2/src/diagonalSums.js</code>
+                        </p>
+                        <p class="list-group-item-text">
+                            You are not allowed to change any other file.
+                        </p>
+                    </li>
+                    <li class="list-group-item">
+                        <h4 class="list-group-item-heading">Expected result</h4>
+                        <p class="list-group-item-text">
+                            <code>npm test</code> runs successfully in the <code>speedchallenge/work/task2</code> folder.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 marking">
+                <h3>Marking scheme</h3>
+
+                <h4>
+                    Objective
+                    <span class="badge">1</span>
+                </h4>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <span class="badge">1</span>
+                        The <code>diagonalSums</code> function works as specified, and the tests run successfully.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Task 3 -->
+        <div class="row sm-content">
+            <div class="col-lg-8">
+                <h3 id="task3">
+                    Task 3 — String Info (PHP)
+                    <span class="label label-success">easy</span>
+                </h3>
+                <p>
+                    Write a PHP function that given some string, returns its length and its word count.
+                    The return format is specified in the work file.
+                </p>
+                <p>
+                    A word is every combination of characters separated by a space, tabulation or a line return.
+                    For instance, <em>can't</em> and <em>world-famous</em> are both counted as one word.
+                </p>
+
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <h4 class="list-group-item-heading">Working directory</h4>
+                        <p class="list-group-item-text">
+                            Implement the empty function in: <code>speedchallenge/work/task3/src/stringInfo.php</code>
+                        </p>
+                        <p class="list-group-item-text">
+                            You are not allowed to change any other file.
+                        </p>
+                    </li>
+                    <li class="list-group-item">
+                        <h4 class="list-group-item-heading">Expected result</h4>
+                        <p class="list-group-item-text">
+                            <code>composer test</code> runs successfully in the <code>speedchallenge/work/task3</code> folder.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 marking">
+                <h3>Marking scheme</h3>
+
+                <h4>
+                    Objective
+                    <span class="badge">1</span>
+                </h4>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <span class="badge">1</span>
+                        The <code>stringInfo</code> function works as specified, and the tests run successfully.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Task 4 -->
+        <div class="row sm-content">
+            <div class="col-lg-8">
+                <h3 id="task4">
+                    Task 4 — ASCII Art Checkerboard (JavaScript)
+                    <span class="label label-warning">medium</span>
+                </h3>
+                <p>
+                    Write a JavaScript function that returns the textual representation of a square checkerboard.
+                </p>
+                <p>
+                    The function should take into account two parameters, both are positive integers (≥&nbsp;0):
+                </p>
+                <ul>
+                    <li>
+                        <code>dim</code> is the dimension of the checkerboard (the number of cases in one direction).
+                    </li>
+                    <li>
+                        <code>size</code> is the dimension of a single case (how many characters wide and tall it should be).
+                    </li>
+                </ul>
+                <p>
+                    The cases should be filled with a chequered pattern: half of the cases should be “empty” (they
+                    contain spaces), and the other half should be “filled” (they contain <code>#</code> characters).
+                    The top left case is always empty.
+                </p>
+                <p>
+                    The borders around the cases should be drawn, using <code>-</code> characters for horizontal borders,
+                    <code>|</code> characters for vertical borders and <code>+</code> characters for intersections.
+                </p>
+                <p>
+                    For example, with <code>dim</code>&nbsp;=&nbsp;8 and <code>size</code>&nbsp;=&nbsp;2,
+                    the checkerboard should look like this:
+                </p>
+                <pre style="line-height: 0.92; letter-spacing: .2em;">+--+--+--+--+--+--+--+--+
+|  |##|  |##|  |##|  |##|
+|  |##|  |##|  |##|  |##|
++--+--+--+--+--+--+--+--+
+|##|  |##|  |##|  |##|  |
+|##|  |##|  |##|  |##|  |
++--+--+--+--+--+--+--+--+
+|  |##|  |##|  |##|  |##|
+|  |##|  |##|  |##|  |##|
++--+--+--+--+--+--+--+--+
+|##|  |##|  |##|  |##|  |
+|##|  |##|  |##|  |##|  |
++--+--+--+--+--+--+--+--+
+|  |##|  |##|  |##|  |##|
+|  |##|  |##|  |##|  |##|
++--+--+--+--+--+--+--+--+
+|##|  |##|  |##|  |##|  |
+|##|  |##|  |##|  |##|  |
++--+--+--+--+--+--+--+--+
+|  |##|  |##|  |##|  |##|
+|  |##|  |##|  |##|  |##|
++--+--+--+--+--+--+--+--+
+|##|  |##|  |##|  |##|  |
+|##|  |##|  |##|  |##|  |
++--+--+--+--+--+--+--+--+</pre>
+
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <h4 class="list-group-item-heading">Working directory</h4>
+                        <p class="list-group-item-text">
+                            Implement the empty function in: <code>speedchallenge/work/task4/src/checkerboard.js</code>
+                        </p>
+                        <p class="list-group-item-text">
+                            You are not allowed to change any other file.
+                        </p>
+                    </li>
+                    <li class="list-group-item">
+                        <h4 class="list-group-item-heading">Expected result</h4>
+                        <p class="list-group-item-text">
+                            <code>npm run test</code> runs successfully in the <code>speedchallenge/work/task4</code> folder.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 marking">
+                <h3>Marking scheme</h3>
+
+                <h4>
+                    Objective
+                    <span class="badge">2</span>
+                </h4>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <span class="badge">2</span>
+                        The <code>checkerboard</code> function works as specified, and all tests run successfully.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Task 5 -->
+        <div class="row sm-content">
+            <div class="col-lg-8">
+                <h3 id="task5">
+                    Task 5 — Data Validation (PHP)
+                    <span class="label label-warning">medium</span>
+                </h3>
+                <p>
+                    Implement the empty functions in the <code>Validation</code> class.
+                    All functions should return true if the validation passes or false if not.
+                    The following validations are supported:
+                </p>
+                <ul>
+                    <li><code>min</code>: check if a string has at least the given length or a number is at least the provided value</li>
+                    <li><code>max</code>: check if a string has at most the given length or a number is at most the provided value</li>
+                    <li><code>unique</code>: check if a value is unique</li>
+                    <li><code>multiple</code>: apply multiple validations (min, max and/or unique)</li>
+                </ul>
+                <p>
+                    A detailed description of each rule can be found in the provided code.
+                </p>
+
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <h4 class="list-group-item-heading">Working directory</h4>
+                        <p class="list-group-item-text">
+                            Implement the empty functions in: <code>speedchallenge/work/task5/src/Validation.php</code>
+                        </p>
+                        <p class="list-group-item-text">
+                            You are not allowed to change any other file.
+                        </p>
+                    </li>
+                    <li class="list-group-item">
+                        <h4 class="list-group-item-heading">Expected result</h4>
+                        <p class="list-group-item-text">
+                            <code>composer test</code> runs successfully in the <code>speedchallenge/work/task5</code> folder.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 marking">
+                <h3>Marking scheme</h3>
+
+                <h4>
+                    Objective
+                    <span class="badge">2</span>
+                </h4>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <span class="badge">0.5</span>
+                        The <code>Validation::min</code> function works as specified, and the test <code>testValidationMin</code> runs successfully.
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge">0.5</span>
+                        The <code>Validation::max</code> function works as specified, and the test <code>testValidationMax</code> runs successfully.
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge">0.5</span>
+                        The <code>Validation::unique</code> function works as specified, and the test <code>testValidationUnique</code> runs successfully.
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge">0.5</span>
+                        The <code>Validation::multiple</code> function works as specified, and the test <code>testValidationMultiple</code> runs successfully.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Task 6 -->
+        <div class="row sm-content">
+            <div class="col-lg-8">
+                <h3 id="task6">
+                    Task 6 — Responsive Design (HTML/CSS)
+                    <span class="label label-warning">medium</span>
+                </h3>
+                <p>
+                    You are given a HTML page with existing CSS. During development, the page was only tested on a desktop browser.
+                </p>
+                <p>
+                    Your task is to make the design responsive and implement some changes <b>only for the mobile viewport</b> which is defined as <code>600px</code> or less.
+                    The resulting mobile page should look as in <a href="images/task6-mobile.png" target="_blank">this screenshot</a>.<br />
+                </p>
+                <p>
+                    The desktop version should not be touched and still look as initially provided.
+                </p>
+                <p>
+                    Following changes have to be made on the mobile version:
+                    <ul class="img-comparison">
+                        <li>
+                            <h5>The logo in the header should be centered</h5>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <p class="img-caption">Currently</p>
+                                    <img src="images/task6-header-provided.png" alt="Task 6 - Header provided" class="img-responsive img-thumbnail">
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="img-caption">Expected</p>
+                                    <img src="images/task6-header-expected.png" alt="Task 6 - Header provided" class="img-responsive img-thumbnail">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <h5>The semi-transparent featured product box should take the full available width and the featured product section (including its background) should have a height of <code>250px</code></h5>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <p class="img-caption">Currently</p>
+                                    <img src="images/task6-featured-product-provided.png" alt="Task 6 - Featured product provided" class="img-responsive img-thumbnail">
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="img-caption">Expected</p>
+                                    <img src="images/task6-featured-product-expected.png" alt="Task 6 - Featured product provided" class="img-responsive img-thumbnail">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <h5>The store should have two items per row instead of four</h5>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <p class="img-caption">Currently</p>
+                                    <img src="images/task6-store-provided.png" alt="Task 6 - Store provided" class="img-responsive img-thumbnail">
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="img-caption">Expected</p>
+                                    <img src="images/task6-store-expected.png" alt="Task 6 - Store provided" class="img-responsive img-thumbnail">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <h5>In the newsletter form, there should only be one input per row and each input should have the full width</h5>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <p class="img-caption">Currently</p>
+                                    <img src="images/task6-newsletter-provided.png" alt="Task 6 - Newsletter provided" class="img-responsive img-thumbnail">
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="img-caption">Expected</p>
+                                    <img src="images/task6-newsletter-expected.png" alt="Task 6 - Newsletter provided" class="img-responsive img-thumbnail">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </p>
+
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <h4 class="list-group-item-heading">Working directory</h4>
+                        <p class="list-group-item-text">
+                            Implement the mobile version within the existing files in: <code>speedchallenge/work/task6/src/</code>.
+                        </p>
+                        <p class="list-group-item-text">
+                            The website is available at <a href="../work/task6/src/index.html" target="_blank">speedchallenge/work/task6/src/index.html</a>.
+                        </p>
+                        <p class="list-group-item-text">
+                            You are also allowed to modify the HTML code as long as you do not touch the existing classes or ids.
+                        </p>
+                    </li>
+                    <li class="list-group-item">
+                        <h4 class="list-group-item-heading">Expected result</h4>
+                        <p class="list-group-item-text">
+                            The mobile version was implemented as specified, and all integration tests run successfully<br />
+                            (run <code>npm test</code> in the <code>speedchallenge/work/task6</code> folder to open Cypress and run the tests)
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 marking">
+                <h3>Marking scheme</h3>
+
+                <h4>
+                    Objective
+                    <span class="badge">2</span>
+                </h4>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <span class="badge">0.5</span>
+                        The <strong>header</strong> has been implemented as specified, and the tests run successfully.
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge">0.5</span>
+                        The <strong>featured product</strong> section has been implemented as specified, and the tests run successfully.
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge">0.5</span>
+                        The <strong>store</strong> section has been implemented as specified, and the tests run successfully.
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge">0.5</span>
+                        The <strong>newsletter signup</strong> section has been implemented as specified, and the tests run successfully.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Task 7 -->
+        <div class="row sm-content">
+            <div class="col-lg-8">
+                <h3 id="task7">Task 7 — Newspaper Layout (HTML/CSS) <span class="label label-danger">hard</span></h3>
+                <p>
+                    The task is to implement as specified a web page layout in CSS.
+                </p>
+                <p>
+                    The HTML code of the page and its base styling (including colors, fonts, margins, borders, etc.) are already provided.
+                    You can add new CSS styles and edit the HTML structure of the page if you need (but the content should stay the same).
+                </p>
+                <p>
+                    You have to implement the layout for the following parts:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Header info</strong>: The elements inside of the <code>#header-info</code> div should be
+                        vertically aligned. The space between the elements should be the same.
+                    </li>
+                    <li>
+                        <strong>Content structure</strong>: The title, header info and footer should take the full width.
+                        Below the header, there should be two columns of the same height.
+                        <br>
+                        The big article (<code>#article-big</code>) should be in the left column. It should be as wide as possible,
+                        and as tall as necessary for its contents.
+                        <br>
+                        The advertisement (<code>#advertisement-wrapper</code>) and the small article (<code>#article-small</code>)
+                        should be in a 250 pixels-wide column on the right. The advertisement’s height should expand to
+                        take all the room that isn’t used by the small article.
+                    </li>
+                </ul>
+                <p>
+                    Note: the requirements should still be met if the text changes (e.g. shorter or longer text content).
+                </p>
+
+                <p>
+                    <a href="images/task7-layout.png" target="_blank">
+                        <img class="img-responsive" src="images/task7-layout.png" alt="Layout schema">
+                    </a>
+                </p>
+
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <h4 class="list-group-item-heading">Working directory</h4>
+                        <p class="list-group-item-text">
+                            Implement the layout in: <code>speedchallenge/work/task7/src/task7.css</code>.
+                        </p>
+                        <p class="list-group-item-text">
+                            The provided HTML code is available at <a href="../work/task7/src/index.html" target="_blank">speedchallenge/work/task7/src/index.html</a> and you are allowed to edit it if you need to.
+                        </p>
+                        <p class="list-group-item-text">
+                            You are not allowed to change any other file. All the other files will get reset for marking.
+                        </p>
+                    </li>
+                    <li class="list-group-item">
+                        <h4 class="list-group-item-heading">Expected result</h4>
+                        <p class="list-group-item-text">
+                            The layout was implemented as specified, and all integration tests run successfully<br />
+                            (run <code>npm test</code> in the <code>speedchallenge/work/task7</code> folder to open Cypress and run the tests)
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 marking">
+                <h3>Marking scheme</h3>
+
+                <h4>
+                    Objective
+                    <span class="badge">3</span>
+                </h4>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <span class="badge">1</span>
+                        The <strong>header info</strong> is implemented as specified, and the integration tests run successfully.
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge">2</span>
+                        The <strong>content structure</strong> is implemented as specified, and the integration tests run successfully.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Task 8 -->
+        <div class="row sm-content">
+            <div class="col-lg-8">
+                <h3 id="task8">
+                    Task 8 — Regex
+                    <span class="label label-danger">hard</span>
+                </h3>
+                <p>
+                    You are given some strings that should match and some that shouldn't.
+                    Write the correct regex patterns to complete this task.
+                </p>
+                <p>
+                    Every regex pattern has a character limit, but you may find solutions that are shorter than the given maximum length.
+                    Also, it is not expected that you figure out a general solution or validate the inputs (e.g. for valid dates).
+                    As long as your regex passes the tests, it will be accepted.
+                </p>
+                <p>
+                    At the top of your work file, there is a pre-solved example with a more detailed explanation.
+                </p>
+                <p>
+                    You can test if your regex patterns are correct by opening the <a href="../work/task8/tests/index.html" target="_blank">tests page</a>.
+                    To reload after you have modified a regex, refresh without cache (Ctrl + R).
+                </p>
+                <p>
+                    A <a href="../material/regex/regular-expressions-cheat-sheet.pdf" target="_blank">Regex Cheat Sheet</a> in provided in your material folder.
+                </p>
+
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <h4 class="list-group-item-heading">Working directory</h4>
+                        <p class="list-group-item-text">
+                            Implement the regex patterns in: <code>speedchallenge/work/task8/src/regex.js</code>
+                        </p>
+                        <p class="list-group-item-text">
+                            You are not allowed to change any other file.
+                        </p>
+                    </li>
+                    <li class="list-group-item">
+                        <h4 class="list-group-item-heading">Expected result</h4>
+                        <p class="list-group-item-text">
+                            All regex patterns are passing on the <a href="../work/task8/tests/index.html" target="_blank">tests page</a>.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 marking">
+                <h3>Marking scheme</h3>
+
+                <h4>
+                    Objective
+                    <span class="badge">3</span>
+                </h4>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <span class="badge">0.5</span>
+                        Regex #1 <code>Numbers 3 to 8</code> is passing on the tests page.
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge">0.5</span>
+                        Regex #2 <code>Three or more words</code> is passing on the tests page.
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge">0.5</span>
+                        Regex #3 <code>Markdown titles</code> is passing on the tests page.
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge">0.5</span>
+                        Regex #4 <code>Dates</code> is passing on the tests page.
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge">1</span>
+                        Regex #5 <code>HTML Tags</code> is passing on the tests page.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Swiss Competition 2020 - Trade 17 - Web Technologies &copy; swiss skills 2020</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- Le javascript
+	================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swisscompetition.js"></script>
+</body>
+
+</html>

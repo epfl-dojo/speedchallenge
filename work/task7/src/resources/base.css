@@ -1,0 +1,188 @@
+/**
+ *
+ * !!!!!!! DO NOT TOUCH NOR MODIFY !!!!!!!
+ * !!!!!!! MODIFICATIONS OF THIS FILE WILL NOT BE RATED !!!!!!!
+ * (Add your own CSS styles in the task7/src/task7.css file)
+ *
+ */
+
+* {
+    box-sizing: border-box;
+    font-family: 'Liberation Serif', serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.logo {
+    width: 300px;
+}
+
+body {
+    background-color: #837c68;
+    color: #423d39;
+    padding: 40px;
+
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    background-color: #efedda;
+    padding: 20px 60px;
+    text-align: left;
+    min-width: 800px;
+    max-width: 1000px;
+}
+
+h1 {
+    text-align: center;
+    margin: 8px 0;
+}
+
+.logo {
+    width: 500px;
+}
+
+#header-info {
+    padding: 8px 0;
+    border-top: 1px solid #847f73;
+    border-bottom: 1px solid #847f73;
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 36px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 5px;
+    line-height: 1.1;
+}
+
+.lead {
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    margin: 0;
+    text-align: left;
+    line-height: 1.2;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: justify;
+}
+
+figure {
+    margin: 0;
+    margin-top: 10px;
+}
+
+figure img {
+    width: 100%;
+}
+
+figcaption {
+    font-style: italic;
+    margin: 5px 0;
+}
+
+footer {
+    padding: 2px 0;
+    border-top: 1px solid #847f73;
+}
+
+footer p {
+    text-align: center;
+    font-style: italic;
+    font-size: 14px;
+}
+
+article {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+#article-big {
+    padding-right: 20px;
+    border-right: 1px solid #847f73;
+}
+
+#article-small {
+    padding-left: 20px;
+}
+
+.article-content p:first-of-type::first-letter {
+    float: left;
+    font-size: 2.8em;
+    padding-right: .2em;
+    line-height: 1;
+}
+
+#advertisement-wrapper {
+    padding-top: 16px;
+    padding-left: 16px;
+}
+
+#advertisement {
+    position: relative;
+    background: #837c68;
+    height: 100%;
+    padding: 35px 20px;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#advertisement h2 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    color: rgba(255, 255, 255, .7);
+    font-size: 16px;
+    font-family: 'Liberation Serif', serif;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+#advertisement p {
+    font-size: 22px;
+    text-align: left;
+}
+
+#advertisement a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgba(255, 255, 255, .7);
+    margin-top: 10px;
+}
+
+#advertisement a:hover {
+    color: white;
+}
+
+.article-columns {
+    margin-top: 10px;
+    column-count: 3;
+    column-gap: 24px;
+}
+
+.article-columns p:first-child {
+    margin-top: 0;
+}

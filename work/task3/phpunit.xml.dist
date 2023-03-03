@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+         cacheResultFile="vendor/phpunit/phpunit.cache"
+         bootstrap="bootstrap.php"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         enforceTimeLimit="true"
+         timeoutForMediumTests="5"
+         printerClass="Trade17Printer"
+         printerFile="tests/Helper/Trade17Printer.php"
+>
+    <testsuites>
+        <testsuite name="Speed Challenge Tests Suite">
+            <directory>./tests/</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

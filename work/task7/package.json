@@ -1,0 +1,16 @@
+{
+    "name": "trade17-speed-challenge-task-7",
+    "version": "1.0.0",
+    "description": "ICTSkills 2020 — Trade 17 — Web Technologies",
+    "scripts": {
+        "test": "node tests/helper/run",
+        "test:json": "FORMAT=json node tests/helper/run"
+    },
+    "author": "SwissSkills",
+    "private": true,
+    "devDependencies": {
+        "chalk": "^4.1.0",
+        "cypress": "^4.12.1",
+        "express": "^4.17.1"
+    }
+}

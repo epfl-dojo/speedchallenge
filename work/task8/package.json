@@ -1,0 +1,11 @@
+{
+    "name": "trade17-speed-challenge-task-8",
+    "version": "1.0.0",
+    "description": "ICTSkills 2020 — Trade 17 — Web Technologies",
+    "scripts": {
+        "test": "xdg-open tests/index.html",
+        "test:json": "node tests/cli"
+    },
+    "author": "SwissSkills",
+    "private": true
+}

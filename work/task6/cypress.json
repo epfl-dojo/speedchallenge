@@ -1,0 +1,14 @@
+{
+    "integrationFolder": "tests",
+    "testFiles": "**/*.test.js",
+    "fixturesFolder": false,
+    "pluginsFile": false,
+    "supportFile": "tests/helper/commands.js",
+    "videosFolder": "tests/videos",
+    "video": false,
+    "screenshotsFolder": "tests/screenshots",
+    "screenshotOnRunFailure": false,
+    "defaultCommandTimeout": 1000,
+    "viewportWidth": 800,
+    "viewportHeight": 731
+}

@@ -1,0 +1,13 @@
+{
+    "integrationFolder": "tests",
+    "testFiles": "**/*.test.js",
+    "fixturesFolder": false,
+    "pluginsFile": false,
+    "supportFile": "tests/helper/commands.js",
+    "videosFolder": "tests/videos",
+    "video": false,
+    "screenshotsFolder": "tests/screenshots",
+    "screenshotOnRunFailure": false,
+    "fileServerFolder": ".",
+    "defaultCommandTimeout": 1000
+}
